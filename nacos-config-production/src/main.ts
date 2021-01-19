@@ -2,7 +2,7 @@
  * @Author: fzlinwenw
  * @Date: 2021-01-18 22:48:07
  * @LastEditors: fzlinwenw
- * @LastEditTime: 2021-01-19 00:15:25
+ * @LastEditTime: 2021-01-19 14:24:03
  * @FilePath: \nacos\nacos-config-production\src\main.ts
  * @Description: Code Description
  */
@@ -19,6 +19,7 @@ async function bootstrap() {
   global.lin.namespace=NAMESPACE;
   global.lin.version=VERSION;
 
+  // glo
 
 
 

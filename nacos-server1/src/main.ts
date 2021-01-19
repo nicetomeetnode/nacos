@@ -2,7 +2,7 @@
  * @Author: fzlinwenw
  * @Date: 2021-01-18 23:23:16
  * @LastEditors: fzlinwenw
- * @LastEditTime: 2021-01-19 01:33:57
+ * @LastEditTime: 2021-01-19 10:07:23
  * @FilePath: \nacos\nacos-server1\src\main.ts
  * @Description: Code Description
  */
@@ -18,14 +18,14 @@ async function bootstrap() {
   await app.listen(3001);
 
 
-//   const nacosNamingClient = new NacosNamingClient({
-//     logger,
-//     serverList: '172.17.0.3:8848',
-//      namespace: NAMESPACE,
-// });
-// const serviceName="hello-world"
-// await nacosNamingClient.ready();
-// await nacosNamingClient.registerInstance(serviceName, {ip:'127.0.0.1', port:3001, weight:0.5,clusterName:"NODEJS"},VERSION);
+  const nacosNamingClient = new NacosNamingClient({
+    logger,
+    serverList: '172.17.0.3:8848',
+     namespace: NAMESPACE,
+});
+const serviceName="hello-world"
+await nacosNamingClient.ready();
+await nacosNamingClient.registerInstance(serviceName, {ip:'127.0.0.1', port:3001, weight:0.5,clusterName:"NODEJS"},VERSION);
   
 
 // nacosNamingClient.subscribe(serviceName, hosts => {
