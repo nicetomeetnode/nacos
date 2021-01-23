@@ -2,7 +2,7 @@
  * @Author: fzlinwenw
  * @Date: 2021-01-19 00:12:05
  * @LastEditors: fzlinwenw
- * @LastEditTime: 2021-01-23 14:07:34
+ * @LastEditTime: 2021-01-23 14:09:01
  * @FilePath: \nacos\nacos-config2-production\src\app.controller.ts
  * @Description: Code Description
  */
@@ -31,7 +31,7 @@ export class AppController {
   }
   @Get("set/:key/:val")
   async set(@Param("key") key, @Param("val") val){
-    //hello o
+    //hello 
     const content= await this.nacosConfigClient.publishSingle(key, global.lin.version, val);
     return content;
   }
