@@ -2,7 +2,7 @@
  * @Author: fzlinwenw
  * @Date: 2021-01-19 00:12:05
  * @LastEditors: fzlinwenw
- * @LastEditTime: 2021-01-19 00:49:37
+ * @LastEditTime: 2021-01-23 13:56:54
  * @FilePath: \nacos\nacos-config2-production\src\app.controller.ts
  * @Description: Code Description
  */
@@ -15,11 +15,12 @@ import { AppService } from './app.service';
 
 
 // namespace  group dataid
-
-@Controller()
+   
+@Controller() 
 export class AppController {
   @Inject("nacos-config")
   private readonly nacosConfigClient;
+  
   constructor(private readonly appService: AppService) {}
 
 
